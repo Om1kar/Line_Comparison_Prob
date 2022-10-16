@@ -23,6 +23,8 @@ public class LineComparison {
         System.out.println("Enter Co-ordinate of y2");
         y2 = sc.nextInt();
 
+        System.out.println("Enter Co-ordinates for Other line");
+
         System.out.println("Enter Co-ordinate of x3");
         x3 = sc.nextInt();
 
@@ -41,9 +43,10 @@ public class LineComparison {
         System.out.println("Length of line2= " + lengthOfLine2);
         System.out.println("After Comparing");
 
-        if (Objects.equals(lengthOfLine1, lengthOfLine2))
-            System.out.println("Both Are Equal");
-
-        else System.out.println("Not Equal");
+       if (Double.compare(lengthOfLine1,lengthOfLine2)==0)
+           System.out.println("Both Are Equal");
+       else if (Double.compare(lengthOfLine1,lengthOfLine2)<0)
+           System.out.println("length of line2 is Greater");
+     else System.out.println("length of line1 is Greater");
     }
 }
